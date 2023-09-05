@@ -1,0 +1,39 @@
+/*abaixo o reset do css com configuraçoes globais*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+@import"Partials/_colors.scss";/*importando as cores a serem usadas*/
+@import"Partials/header.scss";/*css header*/
+@import"Partials/layout.scss";/* css layout*/
+
+
+body{
+    font-family: 'sora', sans sans-serif;
+    width: 100%;
+    height:100vh;
+    position: relative;
+    background-color: $primary-normal;
+}
+
+button{
+    font-family: Sora, sans-serif;
+    cursor: pointer;
+}
+
+svg{ /*para ter uma imagem bem fluida, leve e buscando usa  todo o espaco*/
+    width: 100%;
+}
+
+img{
+    width: 100%; 
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+

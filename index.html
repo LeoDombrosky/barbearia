@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><!--importando animacoes-->
+    <!--abaixo importamos as fontes do google, adicionamos a barra "/>" no final de cada link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <!--abaixo link importando icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--abaixo importando CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--importando JS para as animaçoes-->
+    <!--titulo do site-->
+    <title>Titulo - Sua Barber aqui!</title>
+</head>
+<!--corpo do site-->
+<body>
+    <!--abertura header-->
+<div class="bg-home" >
+    <header>
+        <nav class="header-content container">
+            <div class="header-icons" data-aos="fade-down" data-aos-delay="400">
+                <a href="#">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok fa-2x"></i>
+                </a>
+            </div>
+            <div class="header-logo">
+                <img
+                data-aos="flip-up"
+                data-aos-delay="700"
+                data-aos-duration="1500"
+                src="ASSETS/logo.svg" 
+                alt="Logo Barbearia">
+            </div>
+            <div data-aos="fade-down" data-aos-delay="400">
+                <a class="header-button" 
+                href="https://api.whatsapp.com/send?phone=5541987550259&text=Agende seu Horario" 
+                target="_blank">
+                    Agendar Horario
+                </a>
+            </div>
+        </nav>
+        <main class="hero container">
+             <h1>ESTILO E REFLEXO  DA SUA ATITUDE E A SUA PERSONALIDADE</h1>
+             <P>Horario de Atendimento 09:00</P>
+             <a class="button-contact" target="_blank" href="#">Agendar Horario</a>
+
+        </main>
+    </header>
+</div><!--fechamento Header-->
+
+<section class="about" data-aos="fade-right" data-aos-delay="500">
+    <div class="container about-content">
+        <div>
+            <img data-aos="zoom-in" data-aos-delay="250"
+                src="ASSETS/images.svg" 
+                alt="Fotos de trabalhos">
+        </div>
+        <div
+        data-aos="zoom-out-left" data-aos-delay="250" 
+        class="about-description">
+            <h2>Sobre</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias provident ipsum 
+                consectetur in odio, delectus incidunt. Quaerat odio atque vel ex ad? Illo 
+                laborum porro mollitia repudiandae culpa id magnam.</p>
+            <p>Horario de funcionamento : <strong>09:00</strong>as <strong>18:00</strong> horas.</p>
+
+        </div>
+    </div>   
+</section>
+<!------SERVICES------>
+<section class="services">
+
+    <div class="services-content container">
+        <h2>SERVICOS</h2>
+        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quia officiis eveniet reprehenderit sequi aspernatur, obcaecati eum odio laborum facere architecto modi nesciunt velit molestias consectetur facilis quas, illo incidunt?</P>
+    </div>
+    
+    <section class="haircuts">
+
+        <div class="haircuts"><!--comeco-->
+            <div class="haircut" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000">
+                <img src="ASSETS/corte1.png" alt="Corte Normal"/>            
+                    <div class="haircut-info" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000">
+                        <strong>Corte Normal</strong>
+                        <button>R$ 25,00</button> 
+                    </div>
+            </div>
+            <div class="haircut" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="15   00">
+                <img src="ASSETS/corte2.png" alt="Barba Completa"/>            
+                    <div class="haircut-info" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500">>
+                        <strong>Barba Completa</strong>
+                        <button>R$ 45,00</button>
+                    </div>
+            </div>        
+            <div class="haircut" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="2000">
+                <img src="ASSETS/corte3.png" alt="Cabelo e Barba"/>            
+                    <div class="haircut-info" data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="2000">>
+                        <strong>Cabelo e Barba</strong>
+                        <button>R$ 65,00</button>
+                    </div> 
+            </div>           
+        </div><!--fechamento div haircuts-->
+         
+    </section><!--fechamento section haircuts-->
+</section><!--fechamento section services-->
+
+<!------------------------------------------------------------->
+
+<!---------FOOTER-------------->
+<div class="services">
+    <h2>Venha Conhecer</h2>
+</div>
+
+<!--abaixo adicionamos o mapa do google-->
+<div class="mapa">
+<iframe width="95%"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7403347230183!2d-49.32179062460566!3d-25.580304377466366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcfc29669a9a77%3A0xf20a516b8bc88201!2sRua%20Theodorus%20Maria%20Gerardus%20Bon%2C%20633%20-%20Campo%20de%20Santana%2C%20Curitiba%20-%20PR%2C%2081490-034!5e0!3m2!1spt-BR!2sbr!4v1693689629266!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div><!--fechamento mapa google-->
+
+<footer class="footer container">
+    <div class="footer-icons">
+        <a href="#">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="#">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a >
+    </div>
+    <div>
+        <img src="ASSETS/logo.svg" alt="logo site"/>
+    </div>
+    <p>Copyright 2023 | Dev LAD - Todos os direitos reservados.</p>
+</footer>
+
+<!--botao zap-->
+<a 
+href="https://api.whatsapp.com/send?phone=5541987550259&text=Agende seu Horario" class="btn-zap" target="_blank">
+<img src="ASSETS/whatssapp.svg" alt="botao zap"
+data-aos="zoom-in-up" data-aos-delay="250">
+<span class="tooltip-text" >Agende seu Horario</span>
+</a>
+<script src="script.js"></script>
+</body>
+</html>

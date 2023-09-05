@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/*abaixo o reset do css com configuraçoes globais*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+/*importando as cores a serem usadas*/
+/*menu header*/
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*cria espacos entre os itens do header*/
+}
+
+i {
+  color: #fff;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px; /*assim como justify-content, o GAP tbm cria espacos entre os icones, neste caso, os simbolos do facebook, instagran e tiktok*/
+}
+
+.header-icons a:hover i {
+  -webkit-animation: translateY 0.8s infinite alternate;
+          animation: translateY 0.8s infinite alternate; /*chama a animacao dos botoes das redes sociais*/
+  color: #d34040;
+}
+
+/*criando animacao para icos de redes sociais, face, intagran*/
+@-webkit-keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: #fff;
+  background: transparent;
+  transition: 0.4s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+/********* MENU MOBILE ******************/
+@media screen and (max-width: 768px) { /*tela menor que 768px, ativa menu mobile e executa as acoes abaixo*/
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-content i { /*tammanho dos botoes das redes socias*/
+    margin-top: 14px;
+    font-size: 34px;
+  }
+  .header-logo img {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none; /*retira o botao de agendar no modo mobile*/
+  }
+}
+/*css header*/
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/*BG HOME*/
+.bg-home {
+  position: relative;
+}
+
+.bg-home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.hero {
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 46px;
+}
+.hero p {
+  text-align: center;
+  margin: 14px 0;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #d34040;
+  border: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+  transition: 0.3s;
+}
+
+.button-contact:hover {
+  -webkit-animation: scaleButton 0.8s alternate infinite;
+          animation: scaleButton 0.8s alternate infinite;
+}
+
+@-webkit-keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 30vh;
+  }
+  .hero h1 {
+    font-size: 34px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+}
+
+@media screen and (max-width: 570px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-content p {
+    text-align: center;
+    justify-content: center;
+  }
+}
+.services {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  justify-content: center;
+  max-width: 740px;
+}
+
+.haircuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.haircut img {
+  width: 100%;
+  max-width: 255px;
+  transition: transform 0.2s;
+}
+
+.haircut img:hover {
+  transform: scale(1.2);
+  z-index: 99;
+}
+
+.haircut-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.haircut-info button {
+  color: #fff;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 0;
+  cursor: default;
+}
+
+.mapa {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .haircuts {
+    flex-direction: column;
+  }
+  .haircut img {
+    width: 740px;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0px;
+  gap: 24px;
+  color: #fff;
+}
+
+.footer.icons {
+  display: flex;
+  gap: 8px;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer p {
+    flex-direction: column;
+    font-size: 10px;
+  }
+}
+.btn-zap {
+  position: fixed;
+  bottom: 34px;
+  right: 24px;
+  z-index: 99;
+}
+.btn-zap img {
+  max-width: 54px;
+  transition: transform 0.4s;
+  position: fixed;
+  bottom: 35px;
+  right: 44px;
+}
+.btn-zap img:hover {
+  transform: scale(1.5);
+}
+
+.btn-zap .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 180px;
+  top: -40px;
+  left: -280px;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #232224;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-zap:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  btn-zap img {
+    max-width: 54px;
+  }
+}
+/* css layout*/
+body {
+  font-family: "sora", sans sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121e;
+}
+
+button {
+  font-family: Sora, sans-serif;
+  cursor: pointer;
+}
+
+svg { /*para ter uma imagem bem fluida, leve e buscando usa  todo o espaco*/
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */

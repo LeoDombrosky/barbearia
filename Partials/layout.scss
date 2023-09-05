@@ -1,0 +1,317 @@
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+/*BG HOME*/
+
+.bg-home{
+    position: relative;
+}
+.bg-home:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+//-------------------------------------------
+
+//-----HERO----------------
+.hero{
+    color:$white-normal;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+
+}
+
+.button-contact{
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-light;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+    transition: 0.3s;
+}
+
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+//----------------------
+
+//--HERO MOBILE-----------
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 30vh; //tamanho dos itens do hero na tela mobile
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width:440px){
+    .hero h1{
+        font-size: 24px;
+            
+    }
+ }
+//--------------------------------------------------
+//-------ABOUT------------
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px ;
+    img{
+        max-width: 570px;
+    }
+}
+
+.about-content div{//faz com que as div do "SOBRE" dividam os espacos do layout de maneira igual./
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;    
+    }
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }   
+}
+
+@media screen and (max-width:570px){//quebra o "sobre", para tela mobile.
+    .about-content{
+        flex-direction: column;  
+    }
+    .about-content p{
+        text-align: center;
+        justify-content: center;
+    }
+}
+//----------------------------------------
+//-------SERVICES---------------------
+.services{
+    //border: 3px solid green;
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+}
+
+.services-content h2{
+    text-transform: uppercase;//deixa lestras maiusculas.
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.services-content p{
+    line-height: 150%;//altura entre as linhas
+    margin-bottom: 14px;
+    text-align: center;
+    justify-content: center;
+    max-width: 740px;
+}
+
+.haircuts{
+    
+   // border: 3px solid rgb(253, 118, 7);
+    display: flex; 
+    align-items: center;
+    justify-content: center;//alinhamento do itens na horizontal e vertical
+    gap: 14px; //espacos entre as imagens
+    padding: 0 44px 34px 44px;
+       
+}
+
+.haircut{
+    flex: 1;// para as divs buscarem dividir por igual o espaco dentro da div.
+    display: flex;//para permitir direcionar as divs.
+    flex-direction: column;//direcao do flex, neste caso vertical - column.
+    background-color: $white-normal;
+    border-radius: 8px;//bordas arredondadas.
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);//sombra nas divs.
+    overflow: hidden;//esconde oque passar para fora do espaco definido para a div.
+    img{
+        width: 100%;
+        max-width: 255px;
+        transition: transform 0.2s;//tempo da transicao do efeito das fotos
+    }    
+}
+
+.haircut img:hover{
+    transform: scale(1.2);
+    z-index: 99;//coloca o item em primeiro plano
+}
+
+.haircut-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;//espaco entre titulo e o preco
+    padding: 14px;
+    background-color: $white-normal;
+    z-index: 99;//coloca o texto das fotos 99 camadas acima, para o efeito da foto nao sobrepor o titulo e preco.
+}
+
+.haircut-info button{
+    color: $white-normal;
+    background-color: $red-normal;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 0;
+    cursor: default;//mudar o "default" para "pointer", quando adicional funcao ao botao.
+
+}
+
+.mapa{
+
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+}
+
+
+
+@media screen and (max-width:768px){//adaptcao para mobile.
+    .haircuts{
+        flex-direction: column;
+    }
+    .haircut img{
+        width: 740px;
+    }
+}
+
+.footer{
+   //border: 3px solid rgb(41, 95, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0px;
+    gap: 24px;
+    color: $white-normal;
+    
+}
+
+.footer.icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+}
+
+@media screen and (max-width: 768px){
+    .footer p{
+        flex-direction: column;
+        font-size: 10px;
+    
+    }
+}
+
+.btn-zap{
+    
+    position: fixed;
+    bottom: 34px;
+    right: 24px;
+    z-index: 99;
+
+img{
+    max-width: 54px;
+    transition: transform 0.4s;
+    position:fixed;
+    bottom:35px;
+    right: 44px;
+
+}
+
+img:hover{
+    transform: scale(1.5);
+}   
+
+}
+
+.btn-zap .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 180px;
+    top: -40px;
+    left: -280px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+
+}
+
+.btn-zap:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+@media screen and (max-width:768px){
+
+    btn-zap{
+        img{
+            max-width: 54px;
+
+}
+    
+        }
+    }
